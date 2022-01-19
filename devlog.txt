@@ -55,10 +55,21 @@ tales of wisdom gained...
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 
-
-yyyy-mm-dd
+2022-1-14 (v0 created)
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Michael Kamela :: worked on UML
+Joseph Othman :: worked on UML
+Lawrence Joa :: started coding Connect4
+--------------------------------------------------------------
+2022-1-18 (v1 created)
+--------------------------------------------------------------
+Michael Kamela :: worked on drop method
+Joseph Othman :: worked on drop method
+Lawrence Joa :: worked on drop method
+--------------------------------------------------------------
+2022-1-19 (v2 created)
+--------------------------------------------------------------
+Michael Kamela :: upd Driver
+Joseph Othman :: assisted in writing methods in Connect4
+Lawrence Joa :: upd drop methods
 ==============================================================
