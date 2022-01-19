@@ -24,23 +24,52 @@ public class Connect4{
     clearBoard();
   }
 
-  public void drop(int x){
+  public void dropO(int x){
     try{
-      board[x][x] = ".";
+      int row=5;
+      for(int j=5; j>=0; j--){
+        if(!(board[j][x].equals("."))){
+          row--;
+        }
+      }
+      board[row][x] = "O";
+      String checker = "OOOO";
+      String vert = "";
+      String horiz = "";
+      String diag1 = "";
+      String diag2 = "";
+      for(int j=5; j>=row; j--){
+        vert+=board[j][x];
+      }
+      if(vert.indexOf(checker)>=0){
+        hasWon = true;
+      }
+      for(int j=0; j<7; j++){
+        horiz+=board[row][j];
+      }
+      if(horiz.indexOf(checker)>=0){
+        hasWon = true;
+      }
+
     }
     catch(Exception e){
       System.out.println("Invalid column, drop again");
     }
   }
 
-  public String boardRep(){
-    for(int i=0; i<6; i++){
-      String s = "";
-      for(int j=0; j<7; j++){
-        s += board[i][j];
+  public void dropX(int x){
+    try{
+      int row=5;
+      for(int j=5; j>=0; j--){
+        if(!(board[j][x].equals("."))){
+          row--;
+        }
       }
-      System.out.println(s);
-      return s;
+      board[row][x] = "X";
+    }
+    catch(Exception e){
+      System.out.println("Invalid column, drop again");
     }
   }
+
 }
