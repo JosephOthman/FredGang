@@ -1,14 +1,8 @@
 public class Connect4{
-  public String[][] board;
-  public boolean hasWon;
-  public int moves;
+  public String[][] board = new String[6][7];
+  public boolean hasWon = false;
+  public int moves = 0;
 
-  public void Connect4(){
-    board = new String[6][7];
-    hasWon = false;
-    moves = 0;
-    resetGame();
-  }
 
   public void clearBoard(){
     for(int i=0; i<6; i++){
@@ -146,6 +140,17 @@ public class Connect4{
     catch(Exception e){
       System.out.println("Invalid column, drop again");
     }
+  }
+
+  public String boardRep(){
+    String s = "";
+    for(int i=0; i<6; i++){
+      for(int j=0; j<7; j++){
+        s += board[i][j] + " ";
+      }
+      s+="\n";
+    }
+    return s;
   }
 
 }
