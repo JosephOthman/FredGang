@@ -1,18 +1,16 @@
 import java.io.*;
+import java.util.*;
 
 public class Driver{
 
   public String[][] board;
   public int moves;
-  private static InputStreamReader isr;
-  private static BufferedReader in;
   public static Connect4 game = new Connect4();
 
   public Driver(){
     board = new String[6][7];
     moves = 0;
-    isr = new InputStreamReader( System.in );
-    in = new BufferedReader( isr );
+    Scanner in = new Scanner(System.in);
     NewGame();
   }
 
@@ -29,7 +27,7 @@ public class Driver{
     System.out.println(game.boardRep());
     System.out.println("Player 1, pick a column to place a piece");
       try {
-        int O = Integer.parseInt( in.readLine());
+        int O = Integer.parseInt( in.nextLine());
   	    game.dropO(O); //Checks if this causes error
         if(game.dropO(O)==true){
           return true;
@@ -41,7 +39,7 @@ public class Driver{
       System.out.println(game.boardRep());
       System.out.println("Player 2, pick a column to place a piece");
       try {
-        int X = Integer.parseInt( in.readLine());
+        int X = Integer.parseInt( in.nextLine());
   	    game.dropX(X); //Checks if this causes error
         if(game.dropX(X)==true){
           return true;
