@@ -7,10 +7,11 @@ public class Driver{
   public int moves;
   public static Connect4 game = new Connect4();
 
+  public static Scanner in = new Scanner(System.in);
+
   public Driver(){
     board = new String[6][7];
     moves = 0;
-    Scanner in = new Scanner(System.in);
     NewGame();
   }
 
@@ -27,13 +28,13 @@ public class Driver{
     System.out.println(game.boardRep());
     System.out.println("Player 1, pick a column to place a piece");
       try {
-        int O = Integer.parseInt( in.nextLine());
+        int O = Integer.parseInt(in.nextLine());
   	    game.dropO(O); //Checks if this causes error
         if(game.dropO(O)==true){
           return true;
         }
       }
-      catch ( IOException e ) { //If error is caught
+      catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
       }
       System.out.println(game.boardRep());
@@ -45,7 +46,7 @@ public class Driver{
           return true;
         }
       }
-      catch ( IOException e ) { //If error is caught
+      catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
       }
       return false;
