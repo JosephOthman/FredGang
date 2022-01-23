@@ -27,13 +27,17 @@ public class Connect4{
     }
     board[row][x] = "O";
     String checker = "OOOO";
-    String vert = "";
     String horiz = "";
+    String vert = "";
     String diag1 = "";
     String diag2 = "";
     for(int j=5; j>=row; j--){
       vert+=board[j][x];
     }
+    System.out.println(vert);
+    System.out.println(horiz);
+    System.out.println(diag1);
+    System.out.println(diag2);
     if(vert.indexOf(checker)>=0){
       hasWon = true;
     }
@@ -70,7 +74,6 @@ public class Connect4{
     }
     if(diag2.indexOf(checker)>=0){
       hasWon = true;
-
     }
     return hasWon;
   }

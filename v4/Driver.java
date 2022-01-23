@@ -29,10 +29,14 @@ public class Driver{
     System.out.println("Player 1, pick a column to place a piece");
       try {
         int O = Integer.parseInt(in.nextLine());
-  	    game.dropO(O); //Checks if this causes error
-        if(game.dropO(O)==true){
-          return true;
+        while((O<0) || (O>6)) {
+          System.out.println("Please enter an integer between 0 and 6, inclusive.");
+          O = Integer.parseInt(in.nextLine());
         }
+          game.dropO(O);
+          if(game.dropO(O)==true){
+            return true;
+          }
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
@@ -41,10 +45,14 @@ public class Driver{
       System.out.println("Player 2, pick a column to place a piece");
       try {
         int X = Integer.parseInt( in.nextLine());
-  	    game.dropX(X); //Checks if this causes error
-        if(game.dropX(X)==true){
-          return true;
+        while((X<0) || (X>6)) {
+          System.out.println("Please enter an integer between 0 and 6, inclusive.");
+          X = Integer.parseInt(in.nextLine());
         }
+    	    game.dropX(X); //Checks if this causes error
+          if(game.dropX(X)==true){
+            return true;
+          }
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
