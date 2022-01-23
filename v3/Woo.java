@@ -25,7 +25,6 @@ public class Woo{
     System.out.println(s);
     System.out.println("Columns are numbered left to right from 0-6");
 
-
   }
 
   public static void main(String[] args) {
