@@ -5,6 +5,7 @@ public class Driver{
 
   public String[][] board;
   public static int moves;
+  public static int badMoves;
   public static Connect4 game = new Connect4();
   public static boolean over = false;
 
@@ -42,6 +43,7 @@ public class Driver{
           }
       }
       catch (Exception e ) { //If error is caught
+        badMoves += 1;
         System.out.println("An error has occured, plz try again.");
         playTurn1();
       }
@@ -58,11 +60,12 @@ public class Driver{
         moves += 1;
           if(game.dropX(X)==true){
             over = true;
-            System.out.println("Congrats! Player 2 has won the game!");
+            System.out.println("Congrats! Player 2 has won the game! Here is the final board:");
             System.out.println(game.boardRep());
           }
       }
       catch (Exception e ) { //If error is caught
+        badMoves += 1;
         System.out.println("An error has occured, plz try again.");
         playTurn2();
       }
@@ -71,7 +74,7 @@ public class Driver{
 
   public static void main(String[] args) {
     NewGame();
-    while((moves < 42) && (over == false)){
+    while(((moves-badMoves) < 42) && (over == false)){
       playTurn1();
       if(over == false) {
         playTurn2();
