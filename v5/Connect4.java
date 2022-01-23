@@ -133,14 +133,14 @@ public class Connect4{
   }
 
   public String boardRep(){
-      String s = "";
-      for(int i=0; i<6; i++){
-        for(int j=0; j<7; j++){
-          s += "|" + board[i][j];
-        }
-        s+="|" + "\n";
+    String s = "";
+    for(int i=0; i<6; i++){
+      for(int j=0; j<7; j++){
+        s += "|" + board[i][j];
       }
-      return s;
+      s+="|\n";
     }
+    return s;
+  }
 
 }

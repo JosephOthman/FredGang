@@ -84,10 +84,8 @@ public class Driver{
   public static void main(String[] args) {
     NewGame();
     while((moves < 42) && (over == false)){
-      System.out.println(moves);
       playTurn1();
       if(over == false) {
-        System.out.println(moves);
         playTurn2();
 
       }
