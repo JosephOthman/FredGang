@@ -43,6 +43,7 @@ public class Driver{
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
+        playTurn1();
       }
     }
     public static void playTurn2() {
@@ -63,6 +64,7 @@ public class Driver{
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
+        playTurn2();
       }
   }
 
