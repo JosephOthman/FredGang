@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Driver{
+public class Woo{
   public static Connect4 game = new Connect4();
 
   public static void main(String[] args) {
