@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Driver{
+public class Woo{
 
   public String[][] board;
   public int moves;
@@ -9,7 +9,7 @@ public class Driver{
 
   public static Scanner in = new Scanner(System.in);
 
-  public Driver(){
+  public Woo(){
     board = new String[6][7];
     moves = 0;
     NewGame();
