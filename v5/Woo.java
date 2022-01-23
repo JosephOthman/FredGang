@@ -80,7 +80,6 @@ public class Woo{
       }
   }
 
-
   public static void main(String[] args) {
     NewGame();
     while((moves < 42) && (over == false)){
