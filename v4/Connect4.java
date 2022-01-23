@@ -34,18 +34,8 @@ public class Connect4{
     for(int j=5; j>=row; j--){
       vert+=board[j][x];
     }
-    System.out.println(vert);
-    System.out.println(horiz);
-    System.out.println(diag1);
-    System.out.println(diag2);
-    if(vert.indexOf(checker)>=0){
-      hasWon = true;
-    }
     for(int j=0; j<7; j++){
       horiz+=board[row][j];
-    }
-    if(horiz.indexOf(checker)>=0){
-      hasWon = true;
     }
     int c1 = column;
     int r1 = row;
@@ -68,6 +58,16 @@ public class Connect4{
       diag2+=board[c2][r2];
       c2--;
       r2++;
+    }
+    System.out.println(vert);
+    System.out.println(horiz);
+    System.out.println(diag1);
+    System.out.println(diag2);
+    if(vert.indexOf(checker)>=0){
+      hasWon = true;
+    }
+    if(horiz.indexOf(checker)>=0){
+      hasWon = true;
     }
     if(diag1.indexOf(checker)>=0){
       hasWon = true;
