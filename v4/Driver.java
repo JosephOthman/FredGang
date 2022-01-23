@@ -33,7 +33,6 @@ public class Driver{
           System.out.println("Please enter an integer between 0 and 6, inclusive.");
           O = Integer.parseInt(in.nextLine());
         }
-          game.dropO(O);
           if(game.dropO(O)==true){
             return true;
           }
@@ -49,7 +48,6 @@ public class Driver{
           System.out.println("Please enter an integer between 0 and 6, inclusive.");
           X = Integer.parseInt(in.nextLine());
         }
-    	    game.dropX(X); //Checks if this causes error
           if(game.dropX(X)==true){
             return true;
           }
