@@ -4,8 +4,9 @@ import java.util.*;
 public class Driver{
 
   public String[][] board;
-  public int moves;
+  public static int moves;
   public static Connect4 game = new Connect4();
+  public static boolean over = false;
 
   public static Scanner in = new Scanner(System.in);
 
@@ -24,7 +25,7 @@ public class Driver{
     game.resetGame();
   }
 
-  public static boolean playTurn(){
+  public static void playTurn1(){
     System.out.println(game.boardRep());
     System.out.println("Player 1, pick a column to place a piece");
       try {
@@ -33,13 +34,18 @@ public class Driver{
           System.out.println("Please enter an integer between 0 and 6, inclusive.");
           O = Integer.parseInt(in.nextLine());
         }
+        moves += 1;
           if(game.dropO(O)==true){
-            return true;
+            over = true;
+            System.out.println("Congrats! Player 1 has won the game! Here is the final board:");
+            System.out.println(game.boardRep());
           }
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
       }
+    }
+    public static void playTurn2() {
       System.out.println(game.boardRep());
       System.out.println("Player 2, pick a column to place a piece");
       try {
@@ -48,23 +54,30 @@ public class Driver{
           System.out.println("Please enter an integer between 0 and 6, inclusive.");
           X = Integer.parseInt(in.nextLine());
         }
+        moves += 1;
           if(game.dropX(X)==true){
-            return true;
+            over = true;
+            System.out.println("Congrats! Player 2 has won the game!");
+            System.out.println(game.boardRep());
           }
       }
       catch (Exception e ) { //If error is caught
         System.out.println("An error has occured, plz try again.");
       }
-      return false;
   }
 
 
   public static void main(String[] args) {
     NewGame();
-    while(!(playTurn())){
-      playTurn();
+    while((moves < 42) && (over == false)){
+      playTurn1();
+      if(over == false) {
+        playTurn2();
+      }
     }
-    System.out.println("The game has ended");
+    if(over == false) {
+      System.out.println("The game has ended in a tie.");
+    }
   }
 
   //Arrays.deepToString(int[][])
