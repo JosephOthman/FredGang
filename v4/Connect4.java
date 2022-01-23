@@ -76,6 +76,7 @@ public class Connect4{
     if(diag2.indexOf(checker)>=0){
       hasWon = true;
     }
+    System.out.println(hasWon);
     return hasWon;
   }
 

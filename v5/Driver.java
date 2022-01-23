@@ -37,15 +37,19 @@ public class Driver{
           O = Integer.parseInt(in.nextLine());
         }
         moves += 1;
-          if(game.dropO(O)==true){
-            over = true;
-            System.out.println("Congrats! Player 1 has won the game! Here is the final board:");
-            System.out.println(game.boardRep());
-          }
+        if(game.dropO(O)==true){
+          over = true;
+          System.out.println("Congrats! Player 1 has won the game! Here is the final board:");
+          System.out.println(game.boardRep());
+        }
       }
-      catch (Exception e ) { //If error is caught
-        badMoves += 1;
-        System.out.println("An error has occured, plz try again.");
+      catch (ArrayIndexOutOfBoundsException e ) {
+        System.out.println("Column is full!");
+        moves--;
+        playTurn1();
+      }
+      catch(Exception e){
+        System.out.println("Error, not a number.");
         playTurn1();
       }
     }
@@ -59,15 +63,19 @@ public class Driver{
           X = Integer.parseInt(in.nextLine());
         }
         moves += 1;
-          if(game.dropX(X)==true){
-            over = true;
-            System.out.println("Congrats! Player 2 has won the game! Here is the final board:");
-            System.out.println(game.boardRep());
-          }
+        if(game.dropX(X)==true){
+          over = true;
+          System.out.println("Congrats! Player 2 has won the game! Here is the final board:");
+          System.out.println(game.boardRep());
+        }
+      }
+      catch (ArrayIndexOutOfBoundsException e ) {
+        System.out.println("Column is full!");
+        moves--;
+        playTurn2();
       }
       catch (Exception e ) { //If error is caught
-        badMoves += 1;
-        System.out.println("An error has occured, plz try again.");
+        System.out.println("Error, not a number.");
         playTurn2();
       }
   }
@@ -75,13 +83,17 @@ public class Driver{
 
   public static void main(String[] args) {
     NewGame();
-    while(((moves-badMoves) < 42) && (over == false)){
+    while((moves < 42) && (over == false)){
+      System.out.println(moves);
       playTurn1();
       if(over == false) {
+        System.out.println(moves);
         playTurn2();
+
       }
     }
     if(over == false) {
+      System.out.println(game.boardRep());
       System.out.println("The game has ended in a tie.");
     }
   }

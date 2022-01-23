@@ -34,11 +34,9 @@ public class Connect4{
     for(int j=5; j>=row; j--){
       vert+=board[j][x];
     }
-    System.out.println(vert);
     for(int j=0; j<7; j++){
       horiz+=board[row][j];
     }
-    System.out.println(horiz);
     int c1 = column;
     int r1 = row;
     int c2 = column;
@@ -52,8 +50,6 @@ public class Connect4{
       c1++;
       r1++;
     }
-    System.out.println("diag1:" + diag1);
-
     while((c2<6 && r2>0)){
       c2++;
       r2--;
@@ -63,7 +59,6 @@ public class Connect4{
       c2--;
       r2++;
     }
-    System.out.println("diag2:" + diag2);
     if(vert.indexOf(checker)>=0){
       hasWon = true;
     }
@@ -97,30 +92,22 @@ public class Connect4{
     for(int j=5; j>=row; j--){
       vert+=board[j][x];
     }
-    System.out.println(vert);
     for(int j=0; j<7; j++){
       horiz+=board[row][j];
     }
-    System.out.println(horiz);
     int c1 = column;
     int r1 = row;
     int c2 = column;
     int r2 = row;
-    System.out.println(column);
-    System.out.println(row);
     while((c1>0 && r1>0)){
       c1--;
       r1--;
-      System.out.println(c1);
-      System.out.println(r1);
     }
     while((c1<=6 && r1<=5)){
       diag1+=board[r1][c1];
       c1++;
       r1++;
     }
-    System.out.println("diag1:" + diag1);
-
     while((c2<6 && r2>0)){
       c2++;
       r2--;
@@ -130,7 +117,6 @@ public class Connect4{
       c2--;
       r2++;
     }
-    System.out.println("diag2:" + diag2);
     if(vert.indexOf(checker)>=0){
       hasWon = true;
     }
@@ -147,14 +133,14 @@ public class Connect4{
   }
 
   public String boardRep(){
-    String s = "";
-    for(int i=0; i<6; i++){
-      for(int j=0; j<7; j++){
-        s += board[i][j] + " ";
+      String s = "";
+      for(int i=0; i<6; i++){
+        for(int j=0; j<7; j++){
+          s += "|" + board[i][j];
+        }
+        s+="|" + "\n";
       }
-      s+="\n";
+      return s;
     }
-    return s;
-  }
 
 }
