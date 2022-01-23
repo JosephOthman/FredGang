@@ -25,24 +25,45 @@ Flesh out each category whenever necessary, appropriate.
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
+- Spent 2 days trying to overcome issue with BufferedReader; solved by deciding to use Scanner class instead.
+- Our method for chceking when the game should end was not working; solved by tracing each method carefully and 
+realizing that the issue was when we were defining some important strings.
+- Game was not ending when the entire board was filled; solved by using more than one catch, and checking for
+different errors at different times.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
 
+- Unfortunately we were unable to make a general m x n connect4 game. :(
+- Representation of the Connect4 board isn't the prettiest (although still functional!).
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+
+- When using try and catch, we can have more than one catch, and we can catch specific types of exceptions as opposed
+to just the general one.
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 
+- Needed to use the Driver instead of the Connect4 class a LOT more in order to get the game to work and take in
+correct inputs as necessary.
+- Decided to use 2 different drop methods and 2 different playTurn methods instead of just 1, in order to differentiate
+between different players easier and in order to end the game without both players needing to go (if player 1 wins, player 2
+does not have to drop another piece).
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
+
+- Tracing and planning with UML diagrams is KEY TO SUCCESS.
+- Do NOT rush into coding without a structured plan, or changes will be made.
 
 
 
