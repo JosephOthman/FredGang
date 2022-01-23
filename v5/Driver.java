@@ -20,6 +20,7 @@ public class Driver{
     String s = "";
     s = "================================================================\n";
     s += "Welcome! You are about to begin a game of Connect4\n";
+    s += "Be aware that columns are numbered from 0-6, not from 1-7!\n";
     System.out.println(s);
     System.out.println("Columns are numbered left to right from 0-6");
     game.resetGame();
