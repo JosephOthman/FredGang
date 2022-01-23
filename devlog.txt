@@ -72,4 +72,23 @@ Lawrence Joa :: worked on drop method
 Michael Kamela :: upd Driver
 Joseph Othman :: assisted in writing methods in Connect4
 Lawrence Joa :: upd drop methods
+--------------------------------------------------------------
+2022-1-20 (v3 created)
+--------------------------------------------------------------
+Michael Kamela :: bugfixing
+Joseph Othman :: looked into nullpointerexception error
+Lawrence Joa :: bugfixing
+--------------------------------------------------------------
+2022-1-21 (v4 created)
+--------------------------------------------------------------
+Michael Kamela :: bugfixing
+Joseph Othman :: successfully made drop method
+Lawrence Joa :: successfully made drop method
+--------------------------------------------------------------
+--------------------------------------------------------------
+2022-1-23 (v5 wip)
+--------------------------------------------------------------
+Michael Kamela :: fixing game end checker
+Joseph Othman :: fixing game end checker
+Lawrence Joa :: fixed string representations
 ==============================================================
