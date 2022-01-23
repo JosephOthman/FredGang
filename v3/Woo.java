@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Driver{
+public class Woo{
 
   public String[][] board;
   public boolean hasWon;
@@ -10,7 +10,7 @@ public class Driver{
   private static InputStreamReader isr;
   private static BufferedReader in;
 
-  public Driver(){
+  public Woo(){
     board = new String[6][7];
     hasWon = false;
     moves = 0;
